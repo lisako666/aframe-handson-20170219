@@ -8,9 +8,42 @@
 	<body>
 		<a-scene>
 		<!-- ↓↓↓ここから下に記述する↓↓↓ -->
-
-
-
+		<!--
+		<a-ring color="tomato" position="-4 7 -10" scale="1 1 1" height="10" width="2" depth="10">
+		<a-animation attribute="scale" begin="1000" to="6 6 6"></a-animation>
+		</a-ring>
+		
+		<a-sphere color="blue" position="0 -1.5 -4">
+			<a-animation attribute="position" begin="2000" to="-2 3 -3"></a-animation>
+		</a-sphere>
+		
+		<a-cone color="green" position="3.2 -2.8 -1">
+		<a-animation attribute="material.color" begin="3000" to="yellow"></a-animation>
+		</a-cone>
+		<a-sky color="pink"></a-sky>
+		<a-camera position="0 -1.6 3"></a-camera>
+		-->
+		<!-- 
+		<a-assets>
+		<img id="temple" src="/assets/temple_360.jpg">
+		</a-assets>
+		<a-sky src="#temple"></a-sky>
+		<a-box color="pink" scale="2 2 2"></a-box>
+		<a-camera position="0 0 0"> </a-camera>
+		 -->
+		 
+		 <a-assets>
+		 <a-asset-item id="moongirl-obj" src="/assets/moongirl.obj"></a-asset-item>
+		 <a-asset-item id="moongirl-mtl" src="/assets/moongirl.mtl"></a-asset-item>
+		 <a-asset-item id="moongirl-png" src="/assets/moongirl.png"></a-asset-item>
+		 <img id="temple" src="/assets/temple_360.jpg">
+		 </a-assets>
+		 <a-entity obj-model="obj: #moongirl-obj; mtl: #moongirl-mtl; png: #moongirl-png">
+		 <a-animation attribute="scale" begin="3000" to="2 2 2"></a-animation>
+		 </a-entity>
+		 <a-sky src="#temple"></a-sky>
+		 <a-camera position="0 5 15" rotation="0 120 0"></a-camera>
+		 
 		<!-- ↑↑↑ここから上に記述する↑↑↑ -->
     </a-scene>
 	</body>
